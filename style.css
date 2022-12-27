@@ -29,12 +29,27 @@ body {
       background-color: var(--Magnolia);
 }
 
+@media screen and (min-width: 500px) {
+      form {
+            display: flex;
+            outline: 1px solid red;
+      }
+
+      .container__side-bar {
+            outline: 1px solid red;
+      }
+}
+
 input {
       display: block;
       width: 100%;
       border: 1px solid var(--CoolGray);
       padding: 0.5rem 0 0.5rem 1rem;
       border-radius: 0.25rem;
+}
+
+button {
+      cursor: pointer;
 }
 
 h3 {
@@ -58,10 +73,6 @@ label {
 .disabled {
       display: none;
 }
-
-/* .container {
-      height: 100vh;
-} */
 
 .container__img {
       position: absolute;
@@ -123,7 +134,11 @@ button {
 .next-button {
       background-color: var(--Marineblue);
       color: white;
+}
 
+.confirm-button {
+      color: white;
+      background-color: var(--PurplishBlue);
 }
 
 .container__steps__step2__plans {
@@ -135,7 +150,8 @@ button {
       border-radius: 0.4rem;
 }
 
-.container__steps__step2__plans:hover {
+.container__steps__step2__plans:hover,
+.container__steps__step2__plans.selected {
       outline: 1px solid var(--PurplishBlue);
       background-color: var(--Magnolia);
       cursor: pointer;
@@ -169,9 +185,9 @@ button {
       font-size: 0.9rem;
 }
 
-.monthly {
+/* .monthly {
       display: none;
-}
+} */
 
 /* .annual {
       display: none;
@@ -299,4 +315,74 @@ input:checked+.slider:before {
       margin-top: 1rem;
       text-align: center;
       line-height: 1.5rem;
+}
+
+.container__steps__step-item__step4__plan {
+      margin: 2rem 0 0 0;
+      /* padding: 0 1rem; */
+}
+
+.container__steps__step-item__step4__plan__info,
+.container__steps__step-item__step4__plan__addons__item,
+.container__steps__step-item__step4__plan__total {
+      display: flex;
+      justify-content: space-between;
+}
+
+.container__steps__step-item__step4__plan__addons__item {
+      margin-bottom: 1rem;
+}
+
+.container__steps__step-item__step4__plan__addons__item:last-child {
+      margin-bottom: 0rem;
+}
+
+.container__steps__step-item__step4__plan__info__name,
+.container__steps__step-item__step4__plan__info__cost {
+      font-weight: 500;
+}
+
+.container__steps__step-item__step4__plan__addons__item__name,
+.container__steps__step-item__step4__plan__total__label {
+      color: var(--CoolGray);
+}
+
+.container__steps__step-item__step4__plan__change {
+      color: var(--CoolGray);
+      display: block;
+      margin: 0.5rem 0 1rem 0;
+}
+
+.container__steps__step-item__step4__plan__addons {
+      border-top: solid 1px var(--LightGray);
+      padding: 1rem 0 0 0;
+}
+
+.container__steps__step-item__step4__plan__container {
+      background-color: var(--Magnolia);
+      border-radius: 0.5rem;
+      padding: 1rem;
+}
+
+.container__steps__step-item__step4__plan__total {
+      padding: 1rem 1rem 0 1rem;
+}
+
+.error {
+      margin: 1rem 0;
+      color: red;
+      font-weight: 500;
+}
+
+#name-error,
+#email-error,
+#phone-error {
+      color: red;
+      font-weight: 400;
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+}
+
+.input-error {
+      border: 1px solid red;
 }

@@ -17,28 +17,28 @@
     <form id="form">
       <div class="container__side-bar">
         <div class="container__side-bar__item container__side-bar__item__1">
-          <div class="container__side-bar__item__count active">1</div>
+          <div class="container__side-bar__item__count active" id="side-bar-1">1</div>
           <div class="container__side-bar__item__details disabled">
             <div class="container__side-bar__item__details__step-no">Step 1</div>
             <div class="container__side-bar__item__details__step-details">Your info</div>
           </div>
         </div>
         <div class="container__side-bar__item container__side-bar__item__2">
-          <div class="container__side-bar__item__count">2</div>
+          <div class="container__side-bar__item__count" id="side-bar-2">2</div>
           <div class="container__side-bar__item__details disabled">
             <div class="container__side-bar__item__details__step-no">Step 2</div>
             <div class="container__side-bar__item__details__step-details">Select plan</div>
           </div>
         </div>
         <div class="container__side-bar__item container__side-bar__item__3">
-          <div class="container__side-bar__item__count">3</div>
+          <div class="container__side-bar__item__count" id="side-bar-3">3</div>
           <div class="container__side-bar__item__details disabled">
             <div class="container__side-bar__item__details__step-no">Step 3</div>
             <div class="container__side-bar__item__details__step-details">Add-ons</div>
           </div>
         </div>
         <div class="container__side-bar__item container__side-bar__item__4">
-          <div class="container__side-bar__item__count">4</div>
+          <div class="container__side-bar__item__count" id="side-bar-4">4</div>
           <div class="container__side-bar__item__details disabled">
             <div class="container__side-bar__item__details__step-no">Step 4</div>
             <div class="container__side-bar__item__details__step-details">Summary</div>
@@ -46,68 +46,72 @@
         </div>
       </div>
       <div class="container__steps">
-        <div class="container__steps__step-item disabled">
+        <div class="container__steps__step-item" id="form-step-1">
           <div class="container__steps__form">
             <h3>Personal info</h3>
             <p>Please provide your name, email address, and phone number.</p>
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="e.g. Stephen King">
+            <p class="disabled" id="name-error">Please enter a name.</p>
             <label for="email">Email Address</label>
             <input type="text" id="email" name="email" placeholder="e.g. stephenking@lorem.com">
+            <p id="email-error" class="disabled">Please enter a valid email ID.</p>
             <label for="phone">Phone Number</label>
             <input type="text" id="phone" name="phone" placeholder="e.g. +1 234 567 890">
+            <p id="phone-error" class="disabled">Please enter a valid phone number.</p>
           </div>
           <div class="container__steps__buttons one-button">
-            <button class="next-button" type="button">Next Step</button>
+            <button class="next-button" type="button" id="pg-1-next">Next Step</button>
           </div>
         </div>
-        <div class="container__steps__step-item disabled">
+        <div class="container__steps__step-item disabled" id="form-step-2">
           <div class="container__steps__form">
             <h3>Select your plan</h3>
             <p>You have the option of monthly or yearly billing.</p>
-
+            <div class="error disabled" id="step-2-error">Please select atleast one option.</div>
             <div class="container__steps__step-item">
-              <div class="container__steps__step2__plans">
+              <div class="container__steps__step2__plans" id="plan-arcade">
                 <img src="assets/images/icon-arcade.svg" alt="Select Arcade Plan">
                 <div class="container__steps__step2__plans__details">
                   <div class="container__steps__step2__plans__details__name">Arcade</div>
-                  <div class="container__steps__step2__plans__details__price monthly">
+                  <div class="container__steps__step2__plans__details__price monthly" id="arcade-monthly-price">
                     $9/mo
                   </div>
-                  <div class="container__steps__step2__plans__details__price annual">
+                  <div class="container__steps__step2__plans__details__price annual disabled" id="arcade-yearly-price">
                     $90/yr
                   </div>
-                  <div class="container__steps__step2__plans__details__free annual">
+                  <div class="container__steps__step2__plans__details__free annual disabled" id="arcade-yearly-free">
                     2 months free
                   </div>
                 </div>
               </div>
-              <div class="container__steps__step2__plans">
+              <div class="container__steps__step2__plans" id="plan-advanced">
                 <img src="assets/images/icon-advanced.svg" alt="Select Advanced Plan">
                 <div class="container__steps__step2__plans__details">
                   <div class="container__steps__step2__plans__details__name">Advanced</div>
-                  <div class="container__steps__step2__plans__details__price monthly">
+                  <div class="container__steps__step2__plans__details__price monthly" id="advanced-monthly-price">
                     $12/mo
                   </div>
-                  <div class="container__steps__step2__plans__details__price annual">
+                  <div class="container__steps__step2__plans__details__price annual disabled"
+                    id="advanced-yearly-price">
                     $120/yr
                   </div>
-                  <div class="container__steps__step2__plans__details__free annual">
+                  <div class="container__steps__step2__plans__details__free annual disabled" id="advanced-yearly-free">
                     2 months free
                   </div>
                 </div>
               </div>
-              <div class="container__steps__step2__plans">
+              <div class="container__steps__step2__plans" id="plan-pro">
                 <img src="assets/images/icon-pro.svg" alt="Select Pro Plan">
                 <div class="container__steps__step2__plans__details">
                   <div class="container__steps__step2__plans__details__name">Pro</div>
-                  <div class="container__steps__step2__plans__details__price monthly">
+                  <div class="container__steps__step2__plans__details__price monthly" id="pro-monthly-price">
                     $15/mo
                   </div>
-                  <div class="container__steps__step2__plans__details__price annual">
+                  <div class="container__steps__step2__plans__details__price annual disabled" id="pro-yearly-price">
                     $150/yr
                   </div>
-                  <div class="container__steps__step2__plans__details__free annual">
+                  <div class="container__steps__step2__plans__details__free annual disabled" id="pro-yearly-free">
                     2 months free
                   </div>
                 </div>
@@ -117,7 +121,7 @@
                   Monthly
                 </div>
                 <label class="switch">
-                  <input title="payment-type" type="checkbox">
+                  <input title="payment-type" id="payment-type" type="checkbox">
                   <span class="slider round"></span>
                 </label>
                 <div class="container__steps_step2__payment-type__value">
@@ -127,17 +131,17 @@
             </div>
           </div>
           <div class="container__steps__buttons">
-            <button class="back-button" type="button">Go Back</button>
-            <button class="next-button" type="button">Next Step</button>
+            <button class="back-button" type="button" id="pg-2-back">Go Back</button>
+            <button class="next-button" type="button" id="pg-2-next">Next Step</button>
           </div>
         </div>
-        <div class="container__steps__step-item disabled">
+        <div class="container__steps__step-item disabled" id="form-step-3">
           <div class="container__steps__form">
             <h3>Pick add-ons</h3>
             <p>Add-ons help enhance your gaming experience.</p>
 
             <div class="container__steps__step3__addon">
-              <div class="container__steps__step3__addon__item checked">
+              <div class="container__steps__step3__addon__item">
                 <input type="checkbox" name="add-on" title="add-on" id="online-service">
                 <div class="container__steps__step3__addon__item__details">
                   <div class="container__steps__step3__addon__item__details__header">Online service</div>
@@ -145,8 +149,9 @@
                     Access to multiplayer games
                   </div>
                 </div>
-                <div class="container__steps__step3__addon_item__price monthly">+$1/mo</div>
-                <div class="container__steps__step3__addon_item__price annual">+$10/yr</div>
+                <div class="container__steps__step3__addon_item__price monthly" id="addon-multi-monthly">+$1/mo</div>
+                <div class="container__steps__step3__addon_item__price annual disabled" id="addon-multi-yearly">+$10/yr
+                </div>
               </div>
               <div class="container__steps__step3__addon__item">
                 <input type="checkbox" name="add-on" title="add-on" id="larger-storage">
@@ -156,8 +161,9 @@
                     Extra 1TB of cloud save
                   </div>
                 </div>
-                <div class="container__steps__step3__addon_item__price monthly">+$2/mo</div>
-                <div class="container__steps__step3__addon_item__price annual">+$20/yr</div>
+                <div class="container__steps__step3__addon_item__price monthly" id="addon-storage-monthly">+$2/mo</div>
+                <div class="container__steps__step3__addon_item__price annual disabled" id="addon-storage-yearly">
+                  +$20/yr</div>
               </div>
               <div class="container__steps__step3__addon__item">
                 <input type="checkbox" name="add-on" title="add-on" id="customize-profile">
@@ -168,39 +174,56 @@
                     Custom theme on your profile
                   </div>
                 </div>
-                <div class="container__steps__step3__addon_item__price monthly">+$2/mo</div>
-                <div class="container__steps__step3__addon_item__price annual">+$10/yr</div>
+                <div class="container__steps__step3__addon_item__price monthly" id="addon-profile-monthly">+$2/mo</div>
+                <div class="container__steps__step3__addon_item__price annual disabled" id="addon-profile-yearly">
+                  +$20/yr</div>
               </div>
             </div>
           </div>
           <div class="container__steps__buttons">
-            <button class="back-button" type="button">Go Back</button>
-            <button class="next-button" type="button">Next Step</button>
+            <button class="back-button" type="button" id="pg-3-back">Go Back</button>
+            <button class="next-button" type="button" id="pg-3-next">Next Step</button>
           </div>
         </div>
-        <div class="container__steps__step-item">
+        <div class="container__steps__step-item disabled" id="form-step-4">
           <div class="container__steps__form">
 
             <h3>Finishing up</h3>
             <p>Double-check everything looks OK before confirming.</p>
             <div class="container__steps__step-item__step4__plan">
-              <div class="container__steps__step-item__step4__plan__details">
-                <div class="container__steps__step-item__step4__plan__details__info">
-
-                </div>
+              <div class="container__steps__step-item__step4__plan__container">
+                <!-- <div class="container__steps__step-item__step4__plan__info">
+                  <div class="container__steps__step-item__step4__plan__info__name">Arcade (Monthly)</div>
+                  <div class="container__steps__step-item__step4__plan__info__cost">$9/mo</div>
+                </div> -->
+                <a class="container__steps__step-item__step4__plan__change" href="#" id="step4-change-plan">Change</a>
+                <!-- <div class="container__steps__step-item__step4__plan__addons">
+                  <div class="container__steps__step-item__step4__plan__addons__item">
+                    <div class="container__steps__step-item__step4__plan__addons__item__name">Online service</div>
+                    <div class="container__steps__step-item__step4__plan__addons__item__charge">+$1/mo</div>
+                  </div>
+                  <div class="container__steps__step-item__step4__plan__addons__item">
+                    <div class="container__steps__step-item__step4__plan__addons__item__name">Larger storage</div>
+                    <div class="container__steps__step-item__step4__plan__addons__item__charge">+$1/mo</div>
+                  </div>
+                  <div class="container__steps__step-item__step4__plan__addons__item">
+                    <div class="container__steps__step-item__step4__plan__addons__item__name">Customizable Profile</div>
+                    <div class="container__steps__step-item__step4__plan__addons__item__charge">+$1/mo</div>
+                  </div>
+                </div> -->
               </div>
-              <div class="monthly">Total (per month)</div>
-              <div class="monthly">+$12/mo</div>
-              <div class="annual">Total (per year)</div>
-              <div class="annual">+120/yr</div>
+              <div class="container__steps__step-item__step4__plan__total">
+                <div class="container__steps__step-item__step4__plan__total__label">Total (per month)</div>
+                <div class="container__steps__step-item__step4__plan__total__cost">+12/mo</div>
+              </div>
             </div>
           </div>
           <div class="container__steps__buttons">
-            <button class="back-button" type="button">Go Back</button>
-            <button class="next-button" type="button">Next Step</button>
+            <button class="back-button" type="button" id="pg-4-back">Go Back</button>
+            <button class="confirm-button" type="button" id="pg-4-next">Confirm</button>
           </div>
         </div>
-        <div class="container__steps__step-item disabled">
+        <div class="container__steps__step-item disabled" id="form-step-5">
           <div class="container__steps__form center">
             <img src="./assets/images/icon-thank-you.svg" alt="check-mark">
             <h3>Thank you!</h3>
@@ -209,7 +232,9 @@
               to email us at support@loremgaming.com.</p>
           </div>
         </div>
+      </div>
     </form>
   </div>
+  <script src="./app.js"></script>
 </body>
 </html>
