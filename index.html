@@ -13,33 +13,33 @@
 <body>
 
   <div class="container">
-    <img class="container__img" src="./assets/images/bg-sidebar-mobile.svg" alt="Side image">
+    <img class="container__img" id="side-image-mobile" src="./assets/images/bg-sidebar-mobile.svg" alt="Side image">
     <form id="form">
       <div class="container__side-bar">
         <div class="container__side-bar__item container__side-bar__item__1">
           <div class="container__side-bar__item__count active" id="side-bar-1">1</div>
-          <div class="container__side-bar__item__details disabled">
+          <div class="container__side-bar__item__details mobile-only">
             <div class="container__side-bar__item__details__step-no">Step 1</div>
             <div class="container__side-bar__item__details__step-details">Your info</div>
           </div>
         </div>
         <div class="container__side-bar__item container__side-bar__item__2">
           <div class="container__side-bar__item__count" id="side-bar-2">2</div>
-          <div class="container__side-bar__item__details disabled">
+          <div class="container__side-bar__item__details mobile-only">
             <div class="container__side-bar__item__details__step-no">Step 2</div>
             <div class="container__side-bar__item__details__step-details">Select plan</div>
           </div>
         </div>
         <div class="container__side-bar__item container__side-bar__item__3">
           <div class="container__side-bar__item__count" id="side-bar-3">3</div>
-          <div class="container__side-bar__item__details disabled">
+          <div class="container__side-bar__item__details mobile-only">
             <div class="container__side-bar__item__details__step-no">Step 3</div>
             <div class="container__side-bar__item__details__step-details">Add-ons</div>
           </div>
         </div>
         <div class="container__side-bar__item container__side-bar__item__4">
           <div class="container__side-bar__item__count" id="side-bar-4">4</div>
-          <div class="container__side-bar__item__details disabled">
+          <div class="container__side-bar__item__details mobile-only">
             <div class="container__side-bar__item__details__step-no">Step 4</div>
             <div class="container__side-bar__item__details__step-details">Summary</div>
           </div>
@@ -70,49 +70,53 @@
             <p>You have the option of monthly or yearly billing.</p>
             <div class="error disabled" id="step-2-error">Please select atleast one option.</div>
             <div class="container__steps__step-item">
-              <div class="container__steps__step2__plans" id="plan-arcade">
-                <img src="assets/images/icon-arcade.svg" alt="Select Arcade Plan">
-                <div class="container__steps__step2__plans__details">
-                  <div class="container__steps__step2__plans__details__name">Arcade</div>
-                  <div class="container__steps__step2__plans__details__price monthly" id="arcade-monthly-price">
-                    $9/mo
-                  </div>
-                  <div class="container__steps__step2__plans__details__price annual disabled" id="arcade-yearly-price">
-                    $90/yr
-                  </div>
-                  <div class="container__steps__step2__plans__details__free annual disabled" id="arcade-yearly-free">
-                    2 months free
-                  </div>
-                </div>
-              </div>
-              <div class="container__steps__step2__plans" id="plan-advanced">
-                <img src="assets/images/icon-advanced.svg" alt="Select Advanced Plan">
-                <div class="container__steps__step2__plans__details">
-                  <div class="container__steps__step2__plans__details__name">Advanced</div>
-                  <div class="container__steps__step2__plans__details__price monthly" id="advanced-monthly-price">
-                    $12/mo
-                  </div>
-                  <div class="container__steps__step2__plans__details__price annual disabled"
-                    id="advanced-yearly-price">
-                    $120/yr
-                  </div>
-                  <div class="container__steps__step2__plans__details__free annual disabled" id="advanced-yearly-free">
-                    2 months free
+              <div class="container__steps__step-item__plans">
+                <div class="container__steps__step2__plans" id="plan-arcade">
+                  <img src="assets/images/icon-arcade.svg" alt="Select Arcade Plan">
+                  <div class="container__steps__step2__plans__details">
+                    <div class="container__steps__step2__plans__details__name">Arcade</div>
+                    <div class="container__steps__step2__plans__details__price monthly" id="arcade-monthly-price">
+                      $9/mo
+                    </div>
+                    <div class="container__steps__step2__plans__details__price annual disabled"
+                      id="arcade-yearly-price">
+                      $90/yr
+                    </div>
+                    <div class="container__steps__step2__plans__details__free annual disabled" id="arcade-yearly-free">
+                      2 months free
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="container__steps__step2__plans" id="plan-pro">
-                <img src="assets/images/icon-pro.svg" alt="Select Pro Plan">
-                <div class="container__steps__step2__plans__details">
-                  <div class="container__steps__step2__plans__details__name">Pro</div>
-                  <div class="container__steps__step2__plans__details__price monthly" id="pro-monthly-price">
-                    $15/mo
+                <div class="container__steps__step2__plans" id="plan-advanced">
+                  <img src="assets/images/icon-advanced.svg" alt="Select Advanced Plan">
+                  <div class="container__steps__step2__plans__details">
+                    <div class="container__steps__step2__plans__details__name">Advanced</div>
+                    <div class="container__steps__step2__plans__details__price monthly" id="advanced-monthly-price">
+                      $12/mo
+                    </div>
+                    <div class="container__steps__step2__plans__details__price annual disabled"
+                      id="advanced-yearly-price">
+                      $120/yr
+                    </div>
+                    <div class="container__steps__step2__plans__details__free annual disabled"
+                      id="advanced-yearly-free">
+                      2 months free
+                    </div>
                   </div>
-                  <div class="container__steps__step2__plans__details__price annual disabled" id="pro-yearly-price">
-                    $150/yr
-                  </div>
-                  <div class="container__steps__step2__plans__details__free annual disabled" id="pro-yearly-free">
-                    2 months free
+                </div>
+                <div class="container__steps__step2__plans" id="plan-pro">
+                  <img src="assets/images/icon-pro.svg" alt="Select Pro Plan">
+                  <div class="container__steps__step2__plans__details">
+                    <div class="container__steps__step2__plans__details__name">Pro</div>
+                    <div class="container__steps__step2__plans__details__price monthly" id="pro-monthly-price">
+                      $15/mo
+                    </div>
+                    <div class="container__steps__step2__plans__details__price annual disabled" id="pro-yearly-price">
+                      $150/yr
+                    </div>
+                    <div class="container__steps__step2__plans__details__free annual disabled" id="pro-yearly-free">
+                      2 months free
+                    </div>
                   </div>
                 </div>
               </div>
@@ -227,7 +231,7 @@
           <div class="container__steps__form center">
             <img src="./assets/images/icon-thank-you.svg" alt="check-mark">
             <h3>Thank you!</h3>
-            <p>Thanks for confirming your subscription! We hope you have fun
+            <p class="step5-thanks-text">Thanks for confirming your subscription! We hope you have fun
               using our platform. If you ever need support, please feel free
               to email us at support@loremgaming.com.</p>
           </div>
