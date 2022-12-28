@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Image](/Frontend Mentor Multi-step form.png)
+![Image](Frontend Mentor Multi-step form.png)
 
 ### Links
 
