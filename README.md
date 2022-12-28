@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Image](Frontend Mentor Multi-step form.png)
+![Image](https://github.com/nemilsheriff/multi-step-form-main/blob/master/Frontend%20Mentor%20Multi-step%20form.png)
 
 ### Links
 
